@@ -18,32 +18,32 @@ const Portfolio: React.FC<PortfolioProps> = ({ limit, navigateTo }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-24">
-        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-500 mb-6">Masterpieces</p>
-        <h2 className="text-4xl md:text-6xl font-display font-black mb-8 text-dark-900 tracking-tight uppercase">
-          Signature <span className="font-serif italic font-normal normal-case opacity-60 heading-fix">Portfolio</span>
+      <div className="text-center mb-16">
+        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-500 mb-4">Masterpieces</p>
+        <h2 className="text-3xl md:text-5xl font-display font-black mb-6 text-dark-900 tracking-tight uppercase">
+          SIGNATURE <span className="font-serif italic font-normal normal-case opacity-60 heading-fix">Portfolio</span>
         </h2>
-        <p className="text-slate-400 max-w-xl mx-auto text-lg font-light">
+        <p className="text-slate-400 max-w-xl mx-auto text-base font-light">
           A collection of elite transformations across the NCR's most prestigious sectors.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         {displayedProjects.map((project, index) => (
           <div key={index} className="group cursor-pointer">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] mb-8 shadow-2xl shadow-slate-200/50">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] mb-6 shadow-xl shadow-slate-200/50">
               <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0" />
-              <div className="absolute top-8 left-8 px-6 py-2.5 bg-dark-900/90 backdrop-blur-md rounded-full text-[9px] font-black uppercase tracking-widest text-brand-500 border border-white/10">
+              <div className="absolute top-6 left-6 px-4 py-2 bg-dark-900/90 backdrop-blur-md rounded-full text-[8px] font-black uppercase tracking-widest text-brand-500/90 border border-white/10">
                 {project.location}
               </div>
             </div>
-            <div className="flex justify-between items-end px-4">
+            <div className="flex justify-between items-end px-2">
               <div>
-                <h3 className="text-2xl font-display font-black text-dark-900 group-hover:text-brand-500 transition-colors tracking-tight uppercase">{project.title}</h3>
-                <p className="text-slate-400 font-bold text-[10px] uppercase tracking-widest mt-2">{project.category}</p>
+                <h3 className="text-xl md:text-2xl font-display font-black text-dark-900 group-hover:text-brand-500 transition-colors tracking-tight uppercase">{project.title}</h3>
+                <p className="text-slate-400 font-bold text-[9px] uppercase tracking-widest mt-1">{project.category}</p>
               </div>
-              <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-dark-900 group-hover:border-dark-900 group-hover:text-white transition-all">
-                <div className="text-lg">→</div>
+              <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-dark-900 group-hover:border-dark-900 group-hover:text-white transition-all">
+                <div className="text-base">→</div>
               </div>
             </div>
           </div>

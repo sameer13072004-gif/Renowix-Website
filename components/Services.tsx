@@ -55,23 +55,23 @@ const Services: React.FC<ServicesProps> = ({ limit, navigateTo }) => {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-16 px-4">
-        <h2 className="text-3xl md:text-5xl font-display font-semibold mb-6 text-slate-900 tracking-tight uppercase">
+      <div className="text-center mb-12 px-4">
+        <h2 className="text-2xl md:text-4xl font-display font-semibold mb-4 text-slate-900 tracking-tight uppercase">
           OUR <span className="gold-gradient-text">EXPERTISE</span>
         </h2>
-        <p className="text-slate-500 max-w-2xl mx-auto text-base leading-relaxed font-medium tracking-wider">
+        <p className="text-slate-500 max-w-2xl mx-auto text-sm leading-relaxed font-medium tracking-wider">
           Premium home renovation solutions tailored for Noida and Delhi NCR. 
           Uncompromising quality since 2010.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
         {displayedServices.map((service, index) => (
           <div 
             key={index} 
-            className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-brand-500/20 transition-all hover:shadow-xl hover:-translate-y-1"
+            className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-brand-500/20 transition-all hover:shadow-lg"
           >
-            <div className="relative h-60 overflow-hidden">
+            <div className="relative h-48 md:h-56 overflow-hidden">
               <img 
                 src={service.image} 
                 alt={service.title} 
@@ -79,18 +79,18 @@ const Services: React.FC<ServicesProps> = ({ limit, navigateTo }) => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
             </div>
-            <div className="p-6">
-              <h3 className="text-lg font-display font-semibold mb-3 text-slate-900 group-hover:text-brand-600 transition-colors uppercase tracking-tight">
+            <div className="p-5">
+              <h3 className="text-base font-display font-semibold mb-2 text-slate-900 group-hover:text-brand-600 transition-colors uppercase tracking-tight">
                 {service.title}
               </h3>
-              <p className="text-slate-500 text-xs leading-relaxed mb-6 font-medium tracking-wide">
+              <p className="text-slate-500 text-[11px] leading-relaxed mb-4 font-medium tracking-wide">
                 {service.description}
               </p>
               <button 
                 onClick={() => navigateTo('contact')}
-                className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-brand-600 group-hover:gap-4 transition-all"
+                className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest text-brand-600 group-hover:gap-3 transition-all"
               >
-                Request Details <ChevronRight size={14} />
+                Request Details <ChevronRight size={12} />
               </button>
             </div>
           </div>
