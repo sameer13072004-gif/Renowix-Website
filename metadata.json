@@ -1,0 +1,8 @@
+{
+  "name": "Renowix | Premium Home Renovation Noida & Delhi NCR",
+  "description": "Premium home, kitchen, and bathroom renovation services in Noida and Delhi NCR. Transforming spaces with expert craftsmanship.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
